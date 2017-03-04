@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello...</title>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	</head>
+	
+	<body>
+		<header> HTML & CSS demo page </header>
+		<div id="navigation"> 
+			<h1>Menu (but also a <span class="key">list</span>)</h1>
+			<ol> 
+				<li>Tables <button id="button1">Show/hide</button>
+					<table id="table1" class="hide">
+						<tr>
+							<th>Category</th>
+							<th>Value</th>
+						</tr>
+						<tr>
+							<td>Cat 1</td>
+							<td>Odd</td>
+						</tr>
+						<tr>
+							<td>Cat 2</td>
+							<td rowspan="2">Even</td>
+						</tr>
+						<tr>
+							<td>Cat 4</td>
+						</tr>
+						<tr>
+							<td>Cat 7</td>
+							<td>Odd</td>
+						</tr>
+						
+					</table>	
+				</li>
+				<li>Links<button id="button2">Show/hide</button>
+					<table id="table2" class="hide">
+						<tr>
+							<td><a href="www.facebook.com">Facebook</a></td>
+							<td>
+								<img src="http://s3.india.com/wp-content/uploads/2016/02/Facebook-Logo-meaning.jpg"/>
+								<p>Hover on logo.</p>
+							</td>				
+						</tr>
+
+					</table>	
+					
+				</li>
+				<li>Positioning
+					<p>
+						<div>Block 1 looks good on the left.</div>	
+						<div>Block 2 looks good on the right.</div>
+						<div>Block 3 looks good under block 2.</div>
+						<div>Block 4 doesn't like attention.</div>
+						<div>Block 5 likes to be in the spotlight.</div>
+					</p>
+				</li>
+			</ol>
+
+		</div>
+		<script>
+			// Action for button #1
+			document.getElementById("button1").addEventListener('click', action1, false)
+			function action1() {
+				if (document.getElementById("table1").className=="show") {
+					document.getElementById("table1").className="hide";
+				} else {
+					document.getElementById("table1").className="show";
+				}
+			}
+			// Action for button #2
+			document.getElementById("button2").addEventListener('click', action2, false)
+			function action2() {
+				if (document.getElementById("table2").className=="show") {
+					document.getElementById("table2").className="hide";
+				} else {
+					document.getElementById("table2").className="show";
+				}
+			}
+			</script>
+		<!--
+		<div id="mainContent">
+			<p id="helloText">?</p>
+			<button id="clickButton" class="buttonStyle">click me</button>
+		</div>
+		<script> 
+			var myButton = document.getElementById("clickButton");
+			var myText = document.getElementById("helloText");
+	
+			myButton.addEventListener('click', doSomething, false)
+	
+			function doSomething() {
+			myText.textContent = "hello, world!";
+			}
+		</script>
+		-->
+	</body>
+</html>
+
